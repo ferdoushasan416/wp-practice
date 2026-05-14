@@ -1,0 +1,282 @@
+/*!
+Theme Name: wp-practice
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0.0
+Tested up to: 5.4
+Requires PHP: 5.6
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: wp-practice
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned.
+
+wp-practice is based on Underscores https://underscores.me/, (C) 2012-2020 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+
+.hero-section {
+  height: 37.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--ps-white);
+}
+.hero-title h1 {
+  color: var(--ps-white);
+  font-size: 3.4375rem;
+}
+.hero-description {
+  margin-top: 1.25rem;
+}
+.hero-btn {
+	margin-top: 1.875rem;
+}
+
+/* Smart Media Css Start */
+.smart-media-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  column-gap: 3.125rem;
+}
+.smart-section-content {
+  grid-area: content;
+}
+.smart-section-media {
+  grid-area: media;
+}
+.smart-media-grid.media-left {
+  grid-template-areas: "media content";
+}
+.smart-media-grid.media-right {
+  grid-template-areas: "content media";
+}
+.smart-section-content .site-btn {
+	margin-top: 2.5rem;
+	background-color: var(--ps-purple);
+	color: var(--ps-white);
+}
+.gallery-images {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+.gallery-images.column-count-3 .gallery-image:last-child {
+ grid-column: span 2;
+}
+.gallery-images img {
+	height: 18.75rem;
+	object-fit: cover;
+}
+/* Smart Media Css End */
+
+
+.listing-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+.listing-card-grid.grid-column-1 {
+  grid-template-columns: 1fr;
+}
+.listing-card-grid.grid-column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.listing-card-grid.grid-column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.listing-card-grid.grid-column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.listing-card-grid_card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+}
+.listing-card-grid_card-icon {
+  background-color: #FEEBE7;
+  display: flex;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  justify-content: center;
+  border-radius: 10px;
+}
+.listing-card-gird_card-title {
+  margin-top: 20px;
+}
+.listing-card-gird_card-subtitle {
+  margin-top: -10px;
+  margin-bottom: 0;
+  padding-bottom: 15px;
+}
+.listing-card-gird_card-list {
+  border-top: 1px solid #ddd;
+}
+.listing-card-gird_card-list ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-top: 14px;
+}
+.listing-card-gird_card-list li {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.listing-card-gird_card-list li::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: .5rem;
+	width: 6px;
+	height: 6px;
+	background-color: var(--ps-purple);
+	border-radius: 50%;
+}
+/* Listing Card Grid Css End */
+
+.layout-cards-grid {
+	display: grid;
+	gap: 40px;
+}
+.layout-cards-grid .grid-layout-card {
+	border: 1px solid #ddd;
+	padding: 20px;
+	border-radius: 12px;
+}
+.layout-cards-grid.gird-column-1 {
+  grid-template-columns: 1fr;
+}
+.layout-cards-grid.gird-column-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.layout-cards-grid.gird-column-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.layout-cards-grid.gird-column-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.layout-carousel {
+	display: block;
+}
+.layout-carousel .grid-layout-card {
+	min-height: 15.625rem;
+	align-items: center;
+	justify-content: center;
+	display: flex !important;
+	flex-direction: column;
+  background-color: var(--ps-white);
+	border: 1px solid #ddd;
+	border-radius: 12px;
+}
+.slick-arrow {
+	position: absolute;
+	bottom: -45px;
+	left: 0;
+	z-index: 99;
+}
+.slick-next.slick-arrow {
+	left: auto;
+	right: 0;
+}
+.slick-dots {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	display: flex;
+	gap: 16px;
+	margin-top: 20px;
+}
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  font-size: 16px;
+}
+.layout-list {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.layout-list .grid-layout-card:not(:first-child) {
+  border-top: 1px solid #ddd;
+}
+.layout-list .grid-layout-card {
+	padding: 20px;
+}
+/* Multi Layout Css End */
+
+.pricing-cards-inner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 40px;
+}
+.pricing-card {
+  padding: 30px;
+  background-color: var(--ps-white);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
+.plan-price {
+  margin-top: 16px;
+}
+.pricing-btn {
+  background-color: #ddd;
+  display: inline-flex;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px 30px;
+  color: var(--ps-purple);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 24px;
+  border-radius: 10px;
+  transition: 0.3s all ease;
+}
+.pricing-btn:hover {
+  color: var(--ps-white);
+  background-color: var(--ps-purple);
+}
+.pricing-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	margin-top: 16px;
+}
+.pricing-card.highlight-pricing {
+	border-color: #2563eb;
+	box-shadow: 0 4px 24px rgba(37, 99, 235, 0.22);
+	position: relative;
+}
+.pricing-card.highlight-pricing:before {
+  position: absolute;
+  content: "popular";
+  top: -16px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+  background-color: #2563eb;
+  padding: 2px 20px;
+  font-size: 12px;
+  color: #ffff;
+  border-radius: 20px;
+  text-transform: uppercase;
+}
+.pricing-card.highlight-pricing .pricing-btn {
+  background-color: #2563eb;
+  color: var(--ps-white);
+}
