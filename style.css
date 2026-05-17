@@ -280,3 +280,102 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   background-color: #2563eb;
   color: var(--ps-white);
 }
+
+
+/* Testimonial Css Start */
+.testimonial-grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 40px;
+}
+.testimonial-box {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: var(--ps-white);
+}
+.testimonial-content {
+  margin-top: 10px;
+}
+.testimonial-author {
+  margin-top: 16px;
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid #ddd;
+  padding-top: 16px;
+}
+.tesimonial-avater span {
+  width: 40px;
+  height: 40px;
+  background-color: var(--ps-purple);
+  display: block;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.testimonial-info h5 {
+  margin-bottom: 0;
+  font-size: 20px;
+}
+.testimonial-info span {
+  font-size: 15px;
+}
+.testimonial-carousel .slick-dots {
+	gap: 10px;
+}
+.testimonial-carousel .slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slick-dots li.slick-active button {
+  width: 24px;
+  background: #4a7cf7;
+  border-radius: 4px;
+}
+/* Testimonials Css End */
+
+.faq-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 0 20px;
+    position: relative;
+}
+.faq-question::after {
+	  content: "";
+    width: 8px;
+    height: 8px;
+    border-right: 2px solid #000;
+    border-bottom: 2px solid #000;
+    transform: rotate(45deg);
+    transition: 0.3s;
+    margin-left: 10px;
+}
+.faq-box .faq-question.active::after {
+      transform: rotate(-135deg);
+}
+.faq-box {
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px 0;
+}
+.faq-answer {
+	border-top: 1px solid #ddd;
+	margin-top: 15px;
+	padding-top: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.faq-box:not(:last-child) {
+  margin-bottom: 20px;
+}

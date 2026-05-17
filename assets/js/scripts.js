@@ -18,4 +18,41 @@ jQuery(document).ready(function($){
   slidesToShow: 1,
   
 });
+
+// testimonial slides //
+ $('.testimonial-carousel').slick({
+  arrows: false,
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 1,
+  autoplay: true,
+  
+});
+        $('.faq-question').eq(0).addClass('active');
+        $('.faq-answer').eq(0).slideDown();
+
+        $(".faq-question").on('click', function (){
+            
+            var trigger = $(this);
+            var hasClass = trigger.hasClass('active');
+
+            $('.faq-question').removeClass('active');
+            $('.faq-question').next().slideUp();
+            
+            if(hasClass) {
+                trigger.removeClass('active');
+                trigger.next().slideUp();
+            }
+
+            else {
+                trigger.addClass('active');
+                trigger.next().slideToggle();          
+            }
+
+        });
+
+
+
+
 });  

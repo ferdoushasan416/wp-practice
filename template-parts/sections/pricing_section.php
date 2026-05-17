@@ -17,7 +17,7 @@ $pricing_plans = get_sub_field('pricing_plans'); // ACF repeater field
                 $pricing_feature_list = $pricing_plan['pricing_feature_list']; // repater field
                 $pricing_button = $pricing_plan['pricing_button']; // acf button array field
 
-
+                // Highlight dynamic classes //
                 if($highlight_features) {
                  $highlight = 'highlight-pricing';
                  }elseif($pricing_plan) {
