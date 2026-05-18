@@ -361,7 +361,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
     margin-left: 10px;
 }
 .faq-box .faq-question.active::after {
-      transform: rotate(-135deg);
+    transform: rotate(-135deg);
 }
 .faq-box {
   border: 1px solid #ddd;
@@ -378,4 +378,18 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 }
 .faq-box:not(:last-child) {
   margin-bottom: 20px;
+}
+/* Faq Style Ends */
+
+.bg-type-color {
+  color: var(--ps-white);
+}
+.cta-title h3 {
+  color: var(--ps-white);
+}
+.cta-description {
+  margin-top: 16px;
+}
+.cta-btn {
+  margin-top: 24px;
 }
