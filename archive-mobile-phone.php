@@ -32,13 +32,12 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 			?>
-			<h1><a href="<?php the_permalink();?>">
-				<?php the_title();?>
-			</a></h1>
+              <?php echo get_template_part('inc/arcive-mobile-card');?>
+
             <?php
 			endwhile; 
 
-            the_posts_pagination(); 
+            the_posts_pagination('inc/arcive-mobile-card'); 
 
 		     else :
 

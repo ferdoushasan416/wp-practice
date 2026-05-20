@@ -393,3 +393,13 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .cta-btn {
   margin-top: 24px;
 }
+/* Cts Style Css End */
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+.page-numbers {
+  text-decoration: none;
+}

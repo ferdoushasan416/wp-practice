@@ -32,11 +32,13 @@ get_header();
 				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
 				 */
 			?>
-			   <?php echo get_template_part('template-parts/content', get_post_type() ); ?>
+			
+              <?php echo get_template_part('inc/tshirt'); ?>
+
             <?php
 			endwhile; 
 
-            the_posts_pagination(); 
+            the_posts_pagination('inc/tshirt'); 
 
 		     else :
 
@@ -49,3 +51,4 @@ get_header();
 
 <?php
 get_footer();
+
