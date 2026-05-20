@@ -2,51 +2,47 @@
 /**
  * The template for displaying archive pages
  *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
  * @package wp-practice
  */
 
 get_header();
 ?>
 
-	<main id="primary" class="site-main">
+<main id="primary" class="site-main">
 
-		<?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-				<?php
-				the_archive_title( '<h1 class="page-title">', '</h1>' );
-				the_archive_description( '<div class="archive-description">', '</div>' );
-				?>
-			</header><!-- .page-header -->
-
-			<?php
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-			?>
-              <?php echo get_template_part('inc/arcive-mobile-card');?>
-
+        <header class="page-header">
             <?php
-			endwhile; 
+            the_archive_title( '<h1 class="page-title">', '</h1>' );
+            the_archive_description( '<div class="archive-description">', '</div>' );
+            ?>
+        </header><!-- .page-header -->
 
-            the_posts_pagination('inc/arcive-mobile-card'); 
+        <div class="mobile-card-wrapper mt-50">
+            <?php while ( have_posts() ) : the_post(); ?>
 
-		     else :
+                <?php get_template_part( 'inc/arcive-mobile-card' ); ?>
 
-			get_template_part( 'template-parts/content', 'none' );
+            <?php endwhile; ?>
+        </div><!-- .mobile-card-wrapper -->
 
-		endif;
-		?>
+        <?php
+        the_posts_pagination([
+            'prev_text'          => '<i class="ti ti-arrow-left" aria-hidden="true"></i>',
+            'next_text'          => '<i class="ti ti-arrow-right" aria-hidden="true"></i>',
+            'mid_size'           => 2,
+            'screen_reader_text' => ' ',
+        ]);
+        ?>
 
-	</main><!-- #main -->
+    <?php else : ?>
+
+        <?php get_template_part( 'template-parts/content', 'none' ); ?>
+
+    <?php endif; ?>
+
+</main><!-- #main -->
 
 <?php
 get_sidebar();

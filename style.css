@@ -403,3 +403,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .page-numbers {
   text-decoration: none;
 }
+.mobile-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+}
+.mobile-phone-card {
+  text-align: center;
+}
+.mobile-phone-card_link {
+  text-decoration: none;
+}
