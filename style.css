@@ -408,15 +408,27 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
   grid-template-columns: repeat(4,1fr);
   gap: 40px;
 }
-.mobile-phone-card {
+.mobile-card {
   text-align: center;
 }
 .mobile-phone-card_link {
   text-decoration: none;
 }
+.mobile-archive-navigation ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	align-items: center;
+	gap: 30px;
+	justify-content: center;
+}
+.mobile-archive-navigation li a {
+	text-decoration: none;
+}
 .page-numbers.current {
 	color: #fff;
-	background-color: var(--ps-purple);
+	background-color: #000;
 	width: 35px;
 	height: 35px;
 	display: flex;
@@ -425,3 +437,10 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 	border-radius: 50%;
 }
 /* Custom Post Grid End */
+
+.mobile-archive-navigation li a {
+  color: var(--ps-white);
+  display: block;
+  padding: 6px 20px;
+  background-color: var(--ps-purple);
+}

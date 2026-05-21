@@ -21,7 +21,7 @@ get_header();
 
         <div class="mobile-archive-navigation mt-50">
             <ul>
-                <li><a href=""><?php esc_html_e( 'All', 'practice' ); ?></a></li>
+                <li><a href="<?php echo esc_url( site_url('/mobile-phone') );?>"><?php esc_html_e( 'All', 'practice' ); ?></a></li>
                     <?php
                             $terms = get_terms( array(
                                 'taxonomy'   => 'mobile-brand',
@@ -37,7 +37,7 @@ get_header();
              </ul>
         </div>
 
-        <div class="mobile-card-wrapper mt-50">
+        <div class="mobile-card-wrapper">
             <?php while ( have_posts() ) : the_post(); ?>
 
                 <?php get_template_part( 'inc/arcive-mobile-card' ); ?>

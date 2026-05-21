@@ -1,3 +1,8 @@
+<section class="mobile-archive-section">
+    <h1>Hello From Archive</h1>
+</section>
+
+
 <?php
 /**
  * The template for displaying archive pages
