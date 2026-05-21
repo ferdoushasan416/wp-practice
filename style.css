@@ -414,3 +414,14 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 .mobile-phone-card_link {
   text-decoration: none;
 }
+.page-numbers.current {
+	color: #fff;
+	background-color: var(--ps-purple);
+	width: 35px;
+	height: 35px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+}
+/* Custom Post Grid End */

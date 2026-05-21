@@ -29,8 +29,8 @@ get_header();
 
         <?php
         the_posts_pagination([
-            'prev_text'          => '<i class="ti ti-arrow-left" aria-hidden="true"></i>',
-            'next_text'          => '<i class="ti ti-arrow-right" aria-hidden="true"></i>',
+            'prev_text'          => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="#420680" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
+            'next_text'          => '<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="#420680" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>',
             'mid_size'           => 2,
             'screen_reader_text' => ' ',
         ]);
